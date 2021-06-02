@@ -1,10 +1,8 @@
 const router = require('express').Router();
 
-// Spotify controller.
-const spotify = require('../controller/spotify');
+// Spotify controllers.
+const nowPlayingController = require('../controllers/now-playing');
 
-router.get('/spotify', (req, res) => {
-  res.json(spotify());
-});
+router.get('/spotify/now', nowPlayingController);
 
 module.exports = router;

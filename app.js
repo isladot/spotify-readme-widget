@@ -12,9 +12,6 @@ app.use(compression());
 app.use(helmet());
 
 // Api registration.
-app.use('/', spotify);
+app.use('/api', spotify);
 
-const port = 8000;
-app.listen(port, () => {
-  console.log(`Express listening on port: ${port}`);
-});
+module.exports = app;
