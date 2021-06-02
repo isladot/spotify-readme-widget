@@ -1,7 +1,10 @@
 const router = require('express').Router();
 
+// Spotify controller.
+const controller = require('../controller/spotify');
+
 router.get('/spotify', (req, res) => {
-  res.send('Hello World.');
+  res.json(controller());
 });
 
 module.exports = router;
