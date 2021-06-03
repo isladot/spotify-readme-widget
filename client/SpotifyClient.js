@@ -47,13 +47,13 @@ class SpotifyClient {
     });
 
     if (res.status == 204) return {};
-    return res;
+    return res.data.item;
   }
 
   async getAlbumImage(URL) {
     let b64Image;
 
-    const python = spawn('python', ['./utils/b64-album-cover.py', URL]);
+    const python = spawn('python', ['./common/b64-album-cover.py', URL]);
     python.stdout.on('data', (data) => {
       b64Image = data.toString();
     });
