@@ -2,7 +2,7 @@
   "name": "spotify-readme-np",
   "version": "0.0.1",
   "description": "Dinamically generated Spotify badge for GitHub readme.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {},
   "author": "Luca Biagetti",
   "license": "MIT",
