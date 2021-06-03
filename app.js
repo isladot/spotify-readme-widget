@@ -7,6 +7,8 @@ const helmet = require('helmet');
 // Api.
 const spotify = require('./api/spotify');
 
+app.set('view engine', 'ejs');
+
 app.use(logger('dev'));
 app.use(compression());
 app.use(helmet());
