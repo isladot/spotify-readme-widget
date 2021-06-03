@@ -47,6 +47,16 @@ class SpotifyClient {
     if (res.status == 204) return {};
     return res;
   }
+
+  async getAlbumImage(URL) {
+    const res = await axios({
+      method: 'get',
+      url: URL
+    });
+
+    console.log(res.data);
+    return res.data;
+  }
 }
 
 module.exports = SpotifyClient;
