@@ -1,25 +1,43 @@
-const SpotifyClient = require('../client/spotify-client');
+const SpotifyClient = require('../client/SpotifyClient');
+const { getCardColors, ellipseText } = require('../common/utils');
 
-const getNowPlaying = async (_, res) => {
+const getNowPlaying = async (req, res) => {
   const client = new SpotifyClient();
+  const { theme } = req.query;
 
-  const response = await client.getNowPlaying();
+  res.header('Content-Type', 'image/svg+xml');
 
-  const {
-    name,
-    artists,
-    album: { images },
-    external_urls: { spotify }
-  } = response.data.item;
+  try {
+    const {
+      name,
+      artists,
+      album: { images },
+      external_urls: { spotify }
+    } = await client.getNowPlaying();
 
-  const image = await client.getAlbumImage(images[1].url);
+    const image = await client.getAlbumImage(images[1].url);
 
-  res.render('../templates/now-playing-template.ejs', {
-    trackName: name,
-    artistName: artists[0].name,
-    albumCover: image,
-    trackUrl: spotify
-  });
+    const { wave_color, icon_color, text_color, bg_color } =
+      getCardColors(theme);
+
+    res.render('../templates/now-playing-template.ejs', {
+      // Track Name.
+      trackName: ellipseText(name),
+      // Artist Name.
+      artistName: ellipseText(artists[0].name),
+      // Album Image B64.
+      albumCover: image,
+      // Track URL.
+      trackUrl: spotify,
+      // Theme
+      waveColor: wave_color,
+      iconColor: icon_color,
+      textColor: text_color,
+      bgColor: bg_color
+    });
+  } catch (e) {
+    console.error(e);
+  }
 };
 
 module.exports = getNowPlaying;
