@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="160" viewBox="0 0 480 160" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480" height="160" viewBox="0 0 480 160" fill="none">
   <style>
     .bold {
       font-weight: 600;
@@ -19,22 +19,10 @@
     .artist-bold {
       font: 700 12px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
     }
-
-    .cover {
-      margin: 10%;
-      width: 80%;
-      height: 80%;
-      border-radius: 5px;
-    }
   </style>
   <rect width="480" height="160" rx="5" fill="<%- bgColor %> " />
   <g>
-    <foreignObject width="160" height="160">
-      <a href="<%- trackUrl %>">
-        <img class="cover" src="data:image/png;base64, <%- albumCover %>" />
-      </a>
-    </foreignObject>
-    <g transform="translate(160, 35)">
+    <image transform="translate(15, 15)"  width="128" height="128" xlink:href="data:image/jpeg;base64,<%- albumCover %>" />    <g transform="translate(160, 35)">
       <g transform="translate(0, 0)">
         <svg fill="<%- iconColor %> " viewBox="0 0 512 512" width="14" height="14" y="-10">
           <path

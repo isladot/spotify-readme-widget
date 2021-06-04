@@ -1,6 +1,5 @@
 const axios = require('axios');
-const { spawn } = require('child_process');
-const { once } = require('events');
+const fetch = require('node-fetch');
 
 const REFRESH_TOKEN_URL = 'https://accounts.spotify.com/api/token';
 const NOW_PLAYING_URL =
@@ -51,16 +50,10 @@ class SpotifyClient {
   }
 
   async getAlbumImage(URL) {
-    let b64Image;
+    const res = await fetch(URL);
+    const buff = await res.arrayBuffer();
 
-    const python = spawn('python', ['./common/b64-album-cover.py', URL]);
-    python.stdout.on('data', (data) => {
-      b64Image = data.toString();
-    });
-
-    await once(python, 'close');
-
-    return b64Image;
+    return Buffer.from(buff).toString('base64');
   }
 }
 
