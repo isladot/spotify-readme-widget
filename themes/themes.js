@@ -1,5 +1,5 @@
 const themes = {
-  default: {
+  light: {
     wave_color: '2f80ed',
     icon_color: '4c71f2',
     text_color: '333',
