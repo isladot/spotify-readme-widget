@@ -1,0 +1,22 @@
+{
+  "name": "spotify-readme-np",
+  "version": "0.0.1",
+  "description": "Dinamically generated Spotify badge for GitHub readme.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Luca Biagetti",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "compression": "^1.7.4",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
+  }
+}
