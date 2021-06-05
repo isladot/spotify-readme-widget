@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Dinamically generated Spotify badge for GitHub readme.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js"
+  },
   "author": "Luca Biagetti",
   "license": "MIT",
   "dependencies": {
