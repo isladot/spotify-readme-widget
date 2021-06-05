@@ -16,4 +16,7 @@ app.use(helmet());
 // Api registration.
 app.use('/api', spotify);
 
+// 404.
+app.get('*', (_, res) => res.status(404).json({ error: 'not found.' }));
+
 module.exports = app;
