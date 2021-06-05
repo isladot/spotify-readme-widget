@@ -6,6 +6,7 @@ const getNowPlaying = async (req, res) => {
   const { theme } = req.query;
 
   res.header('Content-Type', 'image/svg+xml');
+  res.header('Cache-Control', 's-maxage=30');
 
   const { wave_color, icon_color, text_color, bg_color } = getCardColors(theme);
 
