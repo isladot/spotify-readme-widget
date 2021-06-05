@@ -1,8 +1,7 @@
 require('dotenv').config();
 const app = require('./app');
 
-const PORT = 8000;
-
-app.listen(PORT, () =>
-  console.log(`Express server listening on port: ${PORT}`)
-);
+app.listen(process.env.PORT || 3000, process.env.HOST || '::', (err) => {
+  if (err) throw err;
+  console.log(`Server listening on ${app.server.address().port}`);
+});
