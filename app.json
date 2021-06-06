@@ -1,0 +1,7 @@
+{
+  "name": "Spotify Readme Widget",
+  "description": "✨ Share your favorite music with everyone! ⚡ Dynamically generated Spotify widgets for GitHub readme.",
+  "repository": "https://github.com/isladot/spotify-readme-widget",
+  "keywords": ["readme", "spotify", "dynamic", "profile-readme"],
+  "addons": []
+}
