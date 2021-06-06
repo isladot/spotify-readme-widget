@@ -21,7 +21,7 @@ Change `<HEROKU_INSTANCE_NAME>` with the name of your personal instance.
 
 ### Themes
 
-You can customize the look of the card using come pre-built themes.
+You can customize the look of the card using pre-built themes.
 
 Add `?theme=THEME_NAME` like so:
 
