@@ -11,4 +11,4 @@ updates:
     commit-message:
       prefix: 'npm'
       prefix-development: 'npm-dev'
-    target-branch: 'develop'
+    target-branch: 'dev'
