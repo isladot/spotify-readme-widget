@@ -67,7 +67,7 @@ Of course, everything will be **completely free**, thanks to [Heroku](https://he
 
   ### Instructions for deploying to Heroku
 
-  1. Sign in to [Heroku](https://signup.heroku.com/) or create a new account at https://signup.heroku.com/
+  1. Sign in to [Heroku](https://id.heroku.com/login) or create a new account at https://signup.heroku.com/
   2. Press the "Deploy to Heroku" button below:
 
   <p align="center">
