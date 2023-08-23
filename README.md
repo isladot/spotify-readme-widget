@@ -13,10 +13,10 @@
 
 Copy-paste this in your GitHub readme, and that's it!
 
-Change `<HEROKU_INSTANCE_NAME>` with the name of your personal instance. 
+Change `<ONRENDER_INSTANCE_NAME>` with the name of your personal instance. 
 
 ```html
-<img src="https://<HEROKU_INSTANCE_NAME>.herokuapp.com/api/spotify/now" />
+<img src="https://<ONRENDER_INSTANCE_NAME>.onrender.com/api/spotify/now" />
 ```
 
 ### Themes
@@ -26,14 +26,14 @@ You can customize the look of the card using pre-built themes.
 Add `?theme=THEME_NAME` like so:
 
 ```html
-<img src="https://<HEROKU_INSTANCE_NAME>.herokuapp.com/api/spotify/now?theme=vue-dark" />
+<img src="https://<ONRENDER_INSTANCE_NAME>.onrender.com/api/spotify/now?theme=vue-dark" />
 ```
 
 ## 📤 Deploy
 
 To make this app work it is necessary to provide data that changes from user to user, thus making it mandatory to create your own instance.
 
-Of course, everything will be **completely free**, thanks to [Heroku](https://heroku.com/), but it will take a few minutes to set up.
+Of course, everything will be **completely free**, thanks to [Render](https://render.com/), but it will take a few minutes to set up.
 
 <details>
   <summary>Spotify Setup</summary>
@@ -63,31 +63,22 @@ Of course, everything will be **completely free**, thanks to [Heroku](https://he
 </details>
 
 <details>
-  <summary>Heroku Setup</summary>
+  <summary>Render Setup</summary>
 
   ### Instructions for deploying to Heroku
 
-  1. Sign in to [Heroku](https://id.heroku.com/login) or create a new account at https://signup.heroku.com/
-  2. Press the "Deploy to Heroku" button below:
-
-  <p align="center">
-    <a href="https://heroku.com/deploy">
-      <img src="https://www.herokucdn.com/deploy/button.svg" title="Deploy to Heroku" alt="Deploy"/>
-    </a>
-  </p>
-
-  3. Click **"Deploy App"** on the page that comes up, then wait for the app deploy.
-  4. Once the app is deployed, click **"Manage App"** to go to the dashboard.
-  5. Go to the **"Settings"** tab and click **"Reveal Config Vars"**.
-  6. Add your personal data obtained from Spotify:
+  1. Sign in to [Render](https://dashboard.render.com/) or create a new account [here](https://dashboard.render.com/register?next=%2F).
+  2. Click on New Web Service.
+  3. Connect your GitHub account by clicking "configure account" and installing Render for GitHub. [Guide](https://render.com/docs/github)
+  4. Connect your repo.
+  5. Fill the form, remember to specify `npm install` instead of `yarn` as Build Command.
+  8. Once the app is deployed, click on the app to go to the dashboard.
+  9. Go to the **"Environment"** tab and add the following env vars.
       * `SPOTIFY_CLIENT_ID`: Your Spotify Application **Client ID**
       * `SPOTIFY_CLIENT_SECRET`: Your Spotify Application **Client Secret**
       * `SPOTIFY_REFRESH_TOKEN`: Your Spotify Refresh Token.
-  7. Check the **Domains** section to get the URL of your instance.
 </details>
 
 ---
 
 Made with Javascript, EJS and ❤️
-
-<a href="https://heroku.com/"><img alt="Powered by Heroku" title="Powered by Heroku" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>
