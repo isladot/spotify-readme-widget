@@ -13,10 +13,10 @@
 
 Copy-paste this in your GitHub readme, and that's it!
 
-Change `<ONRENDER_INSTANCE_NAME>` with the name of your personal instance. 
+Change `<RENDER_INSTANCE_NAME>` with the name of your personal instance. 
 
 ```html
-<img src="https://<ONRENDER_INSTANCE_NAME>.onrender.com/api/spotify/now" />
+<img src="https://<RENDER_INSTANCE_NAME>.onrender.com/api/spotify/now" />
 ```
 
 ### Themes
@@ -26,7 +26,7 @@ You can customize the look of the card using pre-built themes.
 Add `?theme=THEME_NAME` like so:
 
 ```html
-<img src="https://<ONRENDER_INSTANCE_NAME>.onrender.com/api/spotify/now?theme=vue-dark" />
+<img src="https://<RENDER_INSTANCE_NAME>.onrender.com/api/spotify/now?theme=vue-dark" />
 ```
 
 ## 📤 Deploy
@@ -65,7 +65,7 @@ Of course, everything will be **completely free**, thanks to [Render](https://re
 <details>
   <summary>Render Setup</summary>
 
-  ### Instructions for deploying to Heroku
+  ### Instructions for deploying to Render
 
   1. Sign in to [Render](https://dashboard.render.com/) or create a new account [here](https://dashboard.render.com/register?next=%2F).
   2. Click on New Web Service.
