@@ -22,7 +22,21 @@ function getCardColors(theme) {
  * @param {string} string
  */
 function ellipseText(string) {
-  return string.length > 30 ? `${string.substring(0, 30)}...` : string;
+  let escaped = escape(string);
+  return escaped.length > 30 ? `${escaped.substring(0, 30)}...` : escaped;
+}
+
+/**
+ *
+ * @param {string} htmlStr
+ */
+function escape(htmlStr) {
+  return htmlStr
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 module.exports = {
