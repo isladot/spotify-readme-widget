@@ -16,7 +16,7 @@
     "express": "^4.18.2",
     "helmet": "^7.0.0",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.13"
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "prettier": "^3.0.2"
