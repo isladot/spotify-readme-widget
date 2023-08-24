@@ -1,9 +1,9 @@
 version: 2
 updates:
   - package-ecosystem: 'npm'
-    directory: "/"
+    directory: '/'
     schedule:
-      interval: "daily"
+      interval: 'weekly'
     assignees:
       - 'isladot'
     reviewers:
@@ -12,3 +12,5 @@ updates:
       prefix: 'npm'
       prefix-development: 'npm-dev'
     target-branch: 'dev'
+    ignore:
+      - dependency-name: 'node-fetch'
